@@ -1,7 +1,7 @@
 package core
 
 import (
-	"github.com/codingchem/VMTranslator/internal/fileutils"
+	"github.com/codingchem/VMTranslator/fileutils"
 )
 
 func ParseFile(fileName string) chan Command {
