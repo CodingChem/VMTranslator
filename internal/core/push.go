@@ -63,6 +63,8 @@ func pushLocal(command Command) []string {
 		"@SP",
 		"A=M",
 		"M=D",
+		"@SP",
+		"M=M+1",
 	}
 }
 
@@ -77,6 +79,8 @@ func pushArgument(command Command) []string {
 		"@SP",
 		"A=M",
 		"M=D",
+		"@SP",
+		"M=M+1",
 	}
 }
 
