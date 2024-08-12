@@ -1,5 +1,5 @@
 build:
-	go build
+	go build -o VMtranslator src/app/main.go
 	chmod +x ./VMTranslator
 
 clean: 

@@ -1,6 +1,6 @@
 package core
 
-import "github.com/codingchem/VMTranslator/fileutils"
+import "github.com/codingchem/VMTranslator/src/fileutils"
 
 func WriteCode(fileName string, commands chan Command) {
 	lines := make(chan string)

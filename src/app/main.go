@@ -4,7 +4,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/codingchem/VMTranslator/core"
+	"github.com/codingchem/VMTranslator/src/core"
 )
 
 func main() {
