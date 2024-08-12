@@ -1,5 +1,6 @@
 build:
 	go build
+	chmod +x ./VMTranslator
 
 clean: 
 	rm -f ./tests/*/*.asm
