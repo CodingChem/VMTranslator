@@ -8,5 +8,6 @@ build:
 clean: 
 	rm -f ./tests/*/*.asm
 	rm ./VMtranslator
+	rm ./main
 
 #test: build
