@@ -7,7 +7,5 @@ build:
 
 clean: 
 	rm -f ./tests/*/*.asm
-	rm ./VMtranslator
-	rm ./main
-
+	rm ./VMtranslator ./main
 #test: build
