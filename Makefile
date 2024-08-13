@@ -1,16 +1,12 @@
-build:
-	go build -o VMtranslator src/app/main.go
+assignment:
+	mv ./main VMTranslator
 	chmod +x ./VMTranslator
+
+build:
+	go build -o main src/app/main.go
 
 clean: 
 	rm -f ./tests/*/*.asm
 	rm ./VMtranslator
 
-test: build
-	./VMTranslator tests/BasicTest/BasicTest.vm
-	./VMTranslator tests/PointerTest/PointerTest.vm
-	./VMTranslator tests/SimpleAdd/SimpleAdd.vm
-	./VMTranslator tests/StackTest/StackTest.vm
-	./VMTranslator tests/StaticTest/StaticTest.vm
-	
-
+#test: build
