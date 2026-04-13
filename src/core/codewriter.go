@@ -2,13 +2,21 @@ package core
 
 import "github.com/codingchem/VMTranslator/src/fileutils"
 
-func WriteCode(fileName string, commands chan Command) {
+type VMFile struct {
+	Commands chan Command
+	Name     string
+}
+
+func WriteCode(VMFiles []VMFile, fileName string) {
 	lines := make(chan string)
 	go func() {
 		defer close(lines)
-		for command := range commands {
-			for _, line := range translateCommand(command, fileName) {
-				lines <- line
+		for _, file := range VMFiles {
+			fileName := file.Name
+			for command := range file.Commands {
+				for _, line := range translateCommand(command, fileName) {
+					lines <- line
+				}
 			}
 		}
 	}()
